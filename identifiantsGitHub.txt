@@ -1,0 +1,8 @@
+or push an existing repository from the command line
+git remote add origin https://github.com/vapilik/vapilik.git
+git push -u origin master
+
+
+https://github.com/vapilik/vapilik.git
+
+vapilik run

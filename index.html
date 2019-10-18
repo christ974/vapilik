@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vapilik-run</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="css/img/VAPILIK-LOGO_ss_texte PNG.png" width="100" height="auto" alt="logo de vapilik détouré sans texte" />
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="d-flex flex-column h-100" onload="window.location.href ='#openModal';">
+
+ <!-- Fenêtre modale -->
+    <div id="openModal" class="modalDialog">
+        <div>
+            <h5>Avertissement</h5>
+            <p>En cliquant sur "continuer" vous confirmez que vous avez au moins 18 ans si vous habitez en France,<br>ou que vous êtes majeur selon les lois en vigueur dans votre pays
+            <br><br><a href="#close" title="Close" class="close">Continuer</a></p>
+        </div>
+    </div>
+<!-- Fenêtre modale -->
+    
+    <header>
+
+<!-- Navigation -->
+        <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-info" role="navigation">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="css/img/VAPILIK-LOGO_ss_texte PNG.png" width="60em" height="auto" alt="logo vapilik sans texte">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                           
+                            <li class="nav-item active">
+                                <a class="nav-item nav-link navbar-brand active" href="#qui">La boutique<span class="sr-only">(current)</span></a>
+                            </li>
+
+                            <li class="nav-item active">
+                                <a class="nav-item nav-link navbar-brand" href="#ou">Nous trouver</a>
+                            </li>
+
+                            <li class="nav-item active">
+                                <div class="dropdown">
+                                    <a class="nav-link dropdown-toggle nav-item nav-link navbar-brand" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Nos sélections
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="#prod">- e-cigarettes</a>
+                                        <a class="dropdown-item" href="#liquide">- liquides</a>
+                                        <a class="dropdown-item" href="#accessoires">- kits</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+        </nav>
+<!-- Navigation -->
+    </header>
+
+<div class="container">
+
+<!-- Qui sommes nous -->
+        <section id="qui">
+            <h1><img src="css/img/log.png" id="log_boutique" alt="logo vapilik">La boutique</h1>
+
+            <p>VAPILIK est une boutique de cigarettes électroniques située à l'entrée nord de la ville de Saint Benoit.</p>
+            <div class="bout">
+                La boutique commercialise :
+                <ul>
+                    <li>des cigarettes électroniques pour les débutants, les confirmés et les experts en vapotage,</li>
+                    <li>des e-liquides avec un large choix de saveurs : fruitées, classiques (goût tabac), des gourmandes, des mentholés, des fruitées mentholées etc...</li>
+                    <li>"Do It Yourself" , c'est à dire tout ce dont vous avez besoin pour pouvoir fabriquer vos liquides vous même, des accessoires pour cigarette électronique et assimilés :
+                        <ul>
+                            <li>résistance,</li>
+                            <li>pyrex,</li>
+                            <li>coton,</li>
+                            <li>flacons etc...</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p class="bout">
+                    Notre but est de vous satisfaire totalement, en vous faisant découvrir ce monde plein de saveurs, ou en faisant évoluer votre matériel pour encore plus de vapeur et de saveurs, tout en vous proposant du matériel de qualité, reconnu dans le monde de la vape et respectant les exigences de fabrication aux Normes Européennes.
+                </p>
+
+                <p>Rendez vous en boutique pour partager tout cela.</p>
+
+                <p>Fabrice HOARAU </p>
+                <p>VAPILIK</p>
+                <br>
+
+
+                <p id="attention">Attention : il est important de souligner qu'en France la vente de cigarettes électroniques est interdite aux mineurs de moins de 18 ans et que la nicotine qui se trouve dans les produits crée une forte dépendance, donc si vous ne fumez pas, ne vapotez pas.
+                <br>
+                Si vous vous souhaitez arrêter de fumer, les études démontrent que la cigarette électronique est un moyen efficace pour vous aider au sevrage tabagique (<a href="https://www.tabac-info-service.fr/J-arrete-de-fumer" target="_blank">tabac-info-service</a>,
+                <a href="https://www.francevapotage.fr/actualites/2019/5/31/communiqu-de-presse-journe-mondiale-sans-tabac-de-nouvelles-tudes-soulignent-que-le-vapotage-est-une-alternative-srieuse-au-tabac" target="_blank">alternative sérieuse au tabac</a> ).
+                </p>
+            </div>
+        </section>
+<!-- Qui sommes nous -->
+       
+<!-- Où sommes-nous -->
+        <section id="ou">
+            <h1><img src="css/img/log.png" id="log_boutique" alt="">Nous trouver </h1>
+
+            <h5>Directement sur facebook
+                <a href="https://www.facebook.com/vapilik.run" target="_blank">
+                    <img src="css/img/faceb_detoure.png" alt="logo facebook arrondi"></a></h5>
+
+            <h5>Horaires d'ouvertures :</h5>
+            <ul>
+                <li>le lundi de 14 à 19 heures,</li>
+                <li>du mardi au samedi de 9 à 12 heures et de 14 à 19 heures.</li>
+            </ul>
+            <br>
+            <div id="mapid">
+                <script>
+                    var mymap = L.map('mapid').setView([-21.03, 55.71], 16);
+                    //calque img
+                    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+                        maxZoom: 24,
+                        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                            '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                        id: 'mapbox.streets'
+
+                        //ajout à la map
+                    }).addTo(mymap);
+                    var marker = L.marker([-21.030937, 55.710659]).addTo(mymap)
+                    marker.bindPopup("<b>Boutique Vapilik </b><br>82 bis rue Georges Pomidou <br> 97470 Saint-Benoît").openPopup();
+                </script>
+            </div>
+        </section>
+<!-- Où sommes-nous -->
+
+
+<!-- Produits -->
+        <section id="prod">
+            <h1><img src="css/img/log.png" id="log_boutique" alt="logo vapilik">Nos sélections </h1>
+            <ul>
+                <li>
+                    <h5>e-cigarettes :</h5>
+                    <div class="container">
+                        <div class="carousel">
+                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img class="d-block w-100" src="css/img/e-cigarettes/rBVa.png" alt="cigarette électronique tube">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5></h5>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="css/img/e-cigarettes/freemax.png" alt="cigarettes électroniques tube">
+                                        <div class="carousel-caption d-none d-md-block"></div>
+                                        <h5></h5>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="css/img/e-cigarettes/vaporesso.png" alt="cigarette électronique tube">
+                                    <div class="carousel-caption d-none d-md-block"></div>
+                                    <h5></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <div id="liquide">
+                    <h1></h1>
+                    <br>
+                    <li>
+                        <h5>liquides goût péi :*</h5>
+                        <div class="container">
+                            <div class="carousel">
+                                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img class="d-block w-100" src="css/img/liquides/Goutanou.png" alt="flacon de liquide pour e-cigarette">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5></h5>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="d-block w-100" src="css/img/liquides/Tuit-Tuit.png" alt="flacon de liquide pour e-cigarette">
+                                            <h5></h5>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="css/img/liquides/Zanone.png" alt="flacon de liquide pour e-cigarette">
+                                        <div class="carousel-caption d-none d-md-block"></div>
+                                        <h5></h5>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="css/img/liquides/Zavoca.png" alt="flacon de liquide pour e-cigarette">
+                                        <div class="carousel-caption d-none d-md-block"></div>
+                                        <h5></h5>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="css/img/liquides/Mang.png" alt="flacon de liquide pour e-cigarette">
+                                        <div class="carousel-caption d-none d-md-block"></div>
+                                        <h5></h5>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <p id="zourite">*<img src="css/img/E2L-ZOURITE_petit_format.png" alt="logo gamme Zourite">Entre2lab : les arômes employés sont adaptés au vapotage dans une base de grade pharmaceutique à 100% d'origine végétale.</p>
+                        </div>
+                    </li>
+                    
+                    <div id="accessoires">
+                        <h1></h1>
+                        <br>
+                        <li>
+                            <h5>les kits vapoteurs :</h5>
+                            <div class="container">
+                                <div class="carousel">
+                                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img class="d-block w-100" src="css/img/accessoires/kit-cool-fire-mini-innokin-moins-cher.jpg" alt="kit complet vapotage rose">
+                                                <div class="carousel-caption d-none d-md-block">
+                                                    <h5></h5>
+                                                </div>
+                                            </div>
+
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100" src="css/img/accessoires/kit-gen-220w-skrr-s-vaporesso.jpg" alt="kit complet vapotage rouge">
+                                                <h5></h5>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100" src="css/img/accessoires/kit-cool-fire-mini-innokin-moins-cher.jpg" alt="kit complet vapotage rose">
+                                                <div class="carousel-caption d-none d-md-block"></div>
+                                                <h5></h5>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100" src="css/img/accessoires/kit-gen-par-vaporesso.jpg" alt="kit complet vapotage violet">
+                                                <div class="carousel-caption d-none d-md-block"></div>
+                                                <h5></h5>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img class="d-block w-100" src="css/img/accessoires/pic1_1200x.jpg" alt="ensemple de kits complets vapotage">
+                                                <div class="carousel-caption d-none d-md-block"></div>
+                                                <h5></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+            </ul>    
+        </section>
+<!-- Produits -->
+</div>         
+    <!-- Footer -->
+    <footer class="footer-dark text-center justify-content-center bg-info" id="foot">
+        <div class="">
+            <h5 class="text-uppercase font-weight-bold">Contact</h5>
+            <p>
+                <i class="fa fa-home" aria-hidden="true"> </i> 82 bis, rue Georges Pompidou - 97470 Saint-Benoît -
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                vapilik.run@yahoo.com -
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                0693 47 86 89
+            </p>
+        </div>
+        <p><a class="footerInfo" href="mentions_legales.html" target="_blank">Mentions légales </a>&amp; © 2019 Copyright - Vapilik-run</p>
+    </footer>
+    <!-- Footer -->
+
+   
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
